@@ -1,0 +1,10 @@
+@mixin title {
+  color: blue;
+  font-size: 30px;
+}
+
+@mixin links($color) {
+  text-decoration: none;
+  display: block;
+  color: $color;
+}
