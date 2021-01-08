@@ -17,11 +17,11 @@ body {
 header {
   position: fixed;
   display: flex;
-  height: 90%;
-  flex-flow: column wrap;
+  height: 100%;
+  flex-flow: column;
   justify-content: space-between;
   background-color: $nav-bg;
-  width: 42%;
+  width: 40vw;
   padding: 10vh 0 72px 72px;
   h1 {
     display: flex;
@@ -29,35 +29,40 @@ header {
     color: $intro-text-color;
     font-size: 7.2rem;
     text-transform: uppercase;
+    // padding-bottom: 150px;
+    letter-spacing: 5px;
   }
   .header-box {
     display: flex;
     flex-flow: column;
-    justify-content: space-between;
     color: $intro-text-color;
-    height: 35%;
-    p:nth-child(1) {
+    height: 40%;
+    line-height: 1.2;
+    div:nth-child(1) {
       font-size: 2.5rem;
       font-weight: 500;
       width: 70%;
+      margin-bottom: 40px;
     }
-    p:nth-child(2) {
+    div:nth-child(2) {
       text-align: justify;
       text-indent: -0.5em;
       font-size: 1.65rem;
       font-weight: 600;
       width: 70%;
+      margin-bottom: 40px;
     }
     nav {
       text-align: left;
       font-size: 1.55rem;
       font-weight: 600;
       width: 90%;
+      margin-bottom: 50px;
       a {
         color: black;
         opacity: 0.5;
-        text-decoration: none;
-        margin: 10px 10px 10px 0px;
+        margin: 10px 20px 10px 0px;
+        line-height: 1.5;
         cursor: pointer;
         &:hover {
           opacity: 1;
