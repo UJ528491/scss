@@ -64,7 +64,6 @@ body {
         width: 100%;
       }
     }
-    background-color: blue;
   }
   @include section();
   section {
@@ -73,5 +72,10 @@ body {
 }
 @include responsive("desktop") {
   @include header();
+  header {
+    .header-box {
+      max-width: 570px;
+    }
+  }
   @include section();
 }

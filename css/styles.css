@@ -416,7 +416,6 @@ body {
   header {
     width: 42%;
     padding: 7em 7em 7em 7em;
-    background-color: blue;
   }
   header h1 {
     letter-spacing: 10px;
@@ -599,6 +598,9 @@ body {
   }
   header .header-box nav a:hover {
     opacity: 1;
+  }
+  header .header-box {
+    max-width: 570px;
   }
   section {
     margin-left: 33%;
