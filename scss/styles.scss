@@ -14,85 +14,64 @@ body {
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
-header {
-  box-sizing: border-box;
-  position: fixed;
-  display: flex;
-  height: 100%;
-  flex-flow: column;
-  justify-content: space-between;
-  background-color: $nav-bg;
-  width: $header-margin;
-  padding: 10vh 0px 72px 72px;
-  // margin-bottom: 20px;
-  h1 {
-    display: flex;
-    flex-flow: column;
-    color: $intro-text-color;
-    font-size: 7.2rem;
-    text-transform: uppercase;
-    // padding-bottom: 150px;
-    letter-spacing: 20px;
+@include responsive("smartPhone") {
+  body {
+    flex-direction: column;
   }
-  .header-box {
-    display: flex;
-    flex-flow: column;
-    color: $intro-text-color;
-    line-height: 1.2;
-    div:nth-child(1) {
-      font-size: 2.5rem;
-      font-weight: 500;
-      width: 70%;
-      margin-bottom: 40px;
+  @include header();
+  header {
+    position: relative;
+    padding: 5em;
+    width: 100%;
+    h1 {
+      font-size: 5rem;
+      padding-bottom: 60px;
     }
-    div:nth-child(2) {
-      text-align: justify;
-      text-indent: -0.5em;
-      font-size: 1.65rem;
-      font-weight: 600;
-      width: 70%;
-      margin-bottom: 40px;
-    }
-    nav {
-      text-align: left;
-      font-size: 1.55rem;
-      font-weight: 600;
-      width: 90%;
-      // margin-bottom: 50px;
-      a {
-        text-decoration: none;
-        color: black;
-        opacity: 0.55;
-        margin: 10px 20px 10px 0px;
-        line-height: 1.5;
-        cursor: pointer;
-        border-bottom: black solid 1px;
-        &:hover {
-          opacity: 1;
-        }
+    .header-box {
+      padding-top: 60px;
+      div:nth-child(1) {
+        width: 85%;
       }
+      div:nth-child(2) {
+        width: 85%;
+      }
+    }
+  }
+  @include section();
+  section {
+    margin: 0;
+    .box {
+      padding: 5em;
     }
   }
 }
 
-section {
-  margin-left: $header-margin;
-  width: 100%;
-  .box {
-    display: flex;
-    height: 100vh;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: $bg;
-    // height: 80;
-    // width: 100%;
-    // padding: 20em 20em 20em 20em;
-    .movie-header {
-      color: $movie-text-color;
-      display: flex;
-      justify-content: space-between;
-      font-size: 3rem;
+@include responsive("tablet") {
+  @include header();
+  header {
+    width: 42%;
+    padding: 7em 7em 7em 7em;
+    h1 {
+      letter-spacing: 10px;
+      font-size: 5em;
     }
+    .header-box {
+      padding-top: 60px;
+      div:nth-child(1) {
+        width: 100%;
+      }
+      div:nth-child(2) {
+        width: 100%;
+      }
+    }
+    background-color: blue;
   }
+  @include section();
+  section {
+    margin-left: 42%;
+  }
+}
+@include responsive("desktop") {
+  @include header();
+  @include section();
 }
